@@ -1,0 +1,17 @@
+
+import tkinter
+from tkinter import *
+class Calculator(Frame):
+    def _int_(self):
+        frame._int_(self, pg = 'blue')
+        self.option_add('*font', 'arial 23 bold')
+        self.pack(expand=yes, fill=both)
+        self.title('Calculator')
+        obj = entry(self, relief = RIDGE, textvariable = display,
+                    justify = 'right', bd =20, bg = 'poweder blue',
+                    width = 20)
+        obj.pack(side = TOP, expand = yes, fill = both)
+        clearbutton = Button(self, text = 'C', bg ='white', bd = 2,
+                             command = lambda stored = display: stored.set(""))
+      
+Calculator().mainloop()
